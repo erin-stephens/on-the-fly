@@ -1,0 +1,38 @@
+{
+  "-NP8GL2cypSNH3XHp0ih": {
+    "firebaseKey": "-NP8GL2cypSNH3XHp0ih",
+    "uid": "Z7MXMugXlPaZUOjWSfbNnvjb2Bl1",
+    "activity_name": "throughput",
+    "length": 50,
+    "subject": "Stand-alone",
+    "grade": 5,
+    "description": "Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh."
+  },
+  "-NP8GL2fsmCYmW-Wt2Cb": {
+    "firebaseKey": "-NP8GL2fsmCYmW-Wt2Cb",
+    "uid": "Z7MXMugXlPaZUOjWSfbNnvjb2Bl1",
+    "activity_name": "bifurcated",
+    "length": 21,
+    "subject": "3rd generation",
+    "grade": 2,
+    "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui."
+  },
+  "-NP8GL2hlYEtpDeVXHcm": {
+    "firebaseKey": "-NP8GL2hlYEtpDeVXHcm",
+    "uid": "Z7MXMugXlPaZUOjWSfbNnvjb2Bl1",
+    "activity_name": "Advanced",
+    "length": 11,
+    "subject": "challenge",
+    "grade": 2,
+    "description": "Pellentesque at nulla."
+  },
+  "-NP8GL2jom5ecBm8dFH0": {
+    "firebaseKey": "-NP8GL2jom5ecBm8dFH0",
+    "uid": "Z7MXMugXlPaZUOjWSfbNnvjb2Bl1",
+    "activity_name": "software",
+    "length": 25,
+    "subject": "Profit-focused",
+    "grade": 5,
+    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis."
+  }
+}

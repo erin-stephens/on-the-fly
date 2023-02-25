@@ -1,0 +1,34 @@
+{
+  "-NP8lFXvuEZKM8kwXQTx": {
+    "firebaseKey": "-NP8lFXvuEZKM8kwXQTx",
+    "uid": "Z7MXMugXlPaZUOjWSfbNnvjb2Bl1",
+    "lesson_name": "adapter",
+    "subject": "Re-engineered",
+    "class": "Asoka",
+    "directions": "Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim."
+  },
+  "-NP8lFXwpxcJ-pcJuTsd": {
+    "firebaseKey": "-NP8lFXwpxcJ-pcJuTsd",
+    "uid": "Z7MXMugXlPaZUOjWSfbNnvjb2Bl1",
+    "lesson_name": "user-facing",
+    "subject": "Operative",
+    "class": "Otcom",
+    "directions": "Etiam faucibus cursus urna."
+  },
+  "-NP8lFXy_5PIHq8bV3WY": {
+    "firebaseKey": "-NP8lFXy_5PIHq8bV3WY",
+    "uid": "Z7MXMugXlPaZUOjWSfbNnvjb2Bl1",
+    "lesson_name": "budgetary management",
+    "subject": "Upgradable",
+    "class": "It",
+    "directions": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh."
+  },
+  "-NP8lFXzkSzNiBQ4pefK": {
+    "firebaseKey": "-NP8lFXzkSzNiBQ4pefK",
+    "uid": "Z7MXMugXlPaZUOjWSfbNnvjb2Bl1",
+    "lesson_name": "Sharable",
+    "subject": "algorithm",
+    "class": "Sonair",
+    "directions": "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla."
+  }
+}
