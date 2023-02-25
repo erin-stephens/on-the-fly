@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function lessonPlans() {
+export default function LessonPlansPage() {
   return (
     <div>lessonPlans</div>
   );

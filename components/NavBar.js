@@ -24,6 +24,21 @@ export default function NavBar() {
                   Home
                 </a>
               </Link>
+              <Link passHref href="/myPage">
+                <a className="nav-link">
+                  My Page
+                </a>
+              </Link>
+              <Link passHref href="/activities">
+                <a className="nav-link">
+                  View Activities
+                </a>
+              </Link>
+              <Link passHref href="/lessonPlans">
+                <a className="nav-link">
+                  View Lesson Plans
+                </a>
+              </Link>
             </li>
             <button type="button" className="btn btn-danger" onClick={signOut}>
               Sign Out
