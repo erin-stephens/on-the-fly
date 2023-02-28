@@ -12,28 +12,34 @@ export default function ActivityCard({ activityObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>{activityObj.activity_name}</Card.Title>
-        <Card.Text>
-          {activityObj.length}
-          {activityObj.grade}
-        </Card.Text>
-        <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            Options
-          </Dropdown.Toggle>
+    <>
+      <Card style={{ width: '18rem' }}>
+        <div className="video-url">
+          <iframe className="card-video" src={`${activityObj.activity_url}?modestbranding=1&showinfo=0&mute=1`} title={activityObj.activity_name} />
+        </div>
+        <Card.Body>
+          <Card.Title>{activityObj.activity_name}</Card.Title>
+          <Card.Text>
+            Length: {activityObj.length}
+          </Card.Text>
+          <Card.Text>
+            Grade: {activityObj.grade}
+          </Card.Text>
+          <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Options
+            </Dropdown.Toggle>
 
-          <Dropdown.Menu>
-            <Dropdown.Item href={`/activity/${activityObj.firebaseKey}`}>View</Dropdown.Item>
-            <Dropdown.Item href={`/activity/edit/${activityObj.firebaseKey}`}>Edit</Dropdown.Item>
-            <Dropdown.Item onClick={deleteThisActivity}>Delete</Dropdown.Item>
-            <Dropdown.Item>Add to Lesson</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-      </Card.Body>
-    </Card>
+            <Dropdown.Menu>
+              <Dropdown.Item href={`/activity/${activityObj.firebaseKey}`}>View</Dropdown.Item>
+              <Dropdown.Item href={`/activity/edit/${activityObj.firebaseKey}`}>Edit</Dropdown.Item>
+              <Dropdown.Item onClick={deleteThisActivity}>Delete</Dropdown.Item>
+              <Dropdown.Item>Add to Lesson</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Card.Body>
+      </Card>
+    </>
   );
 }
 
