@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Dropdown from 'react-bootstrap';
+import Dropdown from 'react-bootstrap/Dropdown';
 import Card from 'react-bootstrap/Card';
 import { deleteActivity } from '../API/activityData';
 
@@ -22,7 +22,7 @@ export default function ActivityCard({ activityObj, onUpdate }) {
         </Card.Text>
         <Dropdown>
           <Dropdown.Toggle variant="success" id="dropdown-basic">
-            Dropdown Button
+            Options
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
