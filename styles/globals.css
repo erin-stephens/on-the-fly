@@ -18,5 +18,12 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: #12323A;
+}
+
+.navbar {
+  background-color: #12323A;
+}
+.navdropdown {
+  color: white;
 }

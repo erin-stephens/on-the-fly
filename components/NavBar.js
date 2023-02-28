@@ -1,51 +1,43 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
+import { Navbar, NavDropdown } from 'react-bootstrap';
+import Logo from './Logo';
 import { signOut } from '../utils/auth';
 
 export default function NavBar() {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-      <div className="container-fluid">
+    <Navbar expand="lg">
+      <div>
         <Link passHref href="/">
-          <a className="navbar-brand" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
-            CHANGE ME
-          </a>
+          <Navbar.Brand>
+            <div style={{
+              height: '100px',
+              width: '100px',
+            }}
+            >
+              <Logo />
+            </div>
+          </Navbar.Brand>
         </Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon" />
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-              <Link passHref href="/">
-                <a className="nav-link">
-                  Home
-                </a>
-              </Link>
-              <Link passHref href="/myPage">
-                <a className="nav-link">
-                  My Page
-                </a>
-              </Link>
-              <Link passHref href="/activities">
-                <a className="nav-link">
-                  View Activities
-                </a>
-              </Link>
-              <Link passHref href="/lessonPlans">
-                <a className="nav-link">
-                  View Lesson Plans
-                </a>
-              </Link>
-            </li>
-            <button type="button" className="btn btn-danger" onClick={signOut}>
-              Sign Out
-            </button>
-          </ul>
-        </div>
       </div>
-    </nav>
+      <div className="navdropdown">
+        <NavDropdown title="Resources" id="basic-nav-dropdown">
+          <NavDropdown.Item href="/">Home</NavDropdown.Item>
+          <NavDropdown.Item href="/myPage">
+            My Page
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/activities">View Activities</NavDropdown.Item>
+          <NavDropdown.Item href="/lessonPlans">
+            View Lesson Plans
+          </NavDropdown.Item>
+        </NavDropdown>
+      </div>
+      <div className="signOutBtn">
+        <button type="button" className="btn btn-danger" onClick={signOut}>
+          Sign Out
+        </button>
+      </div>
+    </Navbar>
   );
 }
