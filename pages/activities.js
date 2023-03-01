@@ -26,7 +26,7 @@ export default function ActivitiesPage() {
       <h1> All Activities </h1>
       <div className="d-flex flex-wrap">
         {activities.map((activity) => (
-          <ActivityCard key={activity.firebasekey} activityObj={activity} onUpdate={getAllActivities} />
+          <ActivityCard key={activity.firebasekey} activityObj={activity} onUpdate={getActivities} />
         ))}
       </div>
     </div>
