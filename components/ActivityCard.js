@@ -13,7 +13,7 @@ export default function ActivityCard({ activityObj, onUpdate }) {
 
   return (
     <>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '19rem' }}>
         <div className="video-url">
           <iframe className="card-video" src={`${activityObj.activity_url}?modestbranding=1&showinfo=0&mute=1`} title={activityObj.activity_name} />
         </div>
