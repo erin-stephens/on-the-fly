@@ -2,7 +2,7 @@ import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Card from 'react-bootstrap/Card';
 import PropTypes from 'prop-types';
-import deleteLesson from '../api/lessonData';
+import { deleteLesson } from '../api/lessonData';
 
 export default function LessonCard({ lessonObj, onUpdate }) {
   const deleteThisLesson = () => {
