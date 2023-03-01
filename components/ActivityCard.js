@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Card from 'react-bootstrap/Card';
-import { deleteActivity } from '../API/activityData';
+import { deleteActivity } from '../api/activityData';
 
 export default function ActivityCard({ activityObj, onUpdate }) {
   const deleteThisActivity = () => {

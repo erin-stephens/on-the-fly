@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { getAllActivities } from '../API/activityData';
+import { getAllActivities } from '../api/activityData';
 import ActivityCard from '../components/ActivityCard';
 
 export default function ActivitiesPage() {
