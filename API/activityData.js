@@ -35,6 +35,7 @@ const getUserActivities = (uid) => new Promise((resolve, reject) => {
     })
     .catch(reject);
 }); */
+
 // Get Single Activity
 const getSingleActivity = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/activities/${firebaseKey}.json`, {
