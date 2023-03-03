@@ -24,8 +24,8 @@ export default function LessonCard({ lessonObj, onUpdate }) {
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
-            <Dropdown.Item href={`/activity/${lessonObj.firebaseKey}`}>View</Dropdown.Item>
-            <Dropdown.Item href={`/activity/edit/${lessonObj.firebaseKey}`}>Edit</Dropdown.Item>
+            <Dropdown.Item href={`/lesson/${lessonObj.firebaseKey}`}>View</Dropdown.Item>
+            <Dropdown.Item href={`/lesson/edit/${lessonObj.firebaseKey}`}>Edit</Dropdown.Item>
             <Dropdown.Item onClick={deleteThisLesson}>Delete</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
