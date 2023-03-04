@@ -36,7 +36,9 @@ export default function ViewLessonPlan() {
       </Head>
       <div className="text-white ms-5 details">
         <h5>{lesson.lesson_name}</h5>
+        <p>{lesson.directions}</p>
       </div>
+      <hr />
       <div>
         <div className=" d-flex flex-wrap justify-content-center">
           {activities.map((item) => <LessonActivityCard key={item.firebaseKey} lessonActivityObj={item} lessonPlan_id={firebaseKey} onUpdate={getLessonDetails} />)}
