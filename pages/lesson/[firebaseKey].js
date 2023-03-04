@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { getAllActivities } from '../../api/activityData';
 import { getSingleLesson } from '../../api/lessonData';
 import { getMergedObjectsByLessonId } from '../../api/mergedData';
-import ActivityCard from '../../components/ActivityCard';
+import LessonActivityCard from '../../components/LessonActivityCard';
 
 export default function ViewLessonPlan() {
   const [lesson, setLesson] = useState({});
@@ -39,7 +39,7 @@ export default function ViewLessonPlan() {
       </div>
       <div>
         <div className=" d-flex flex-wrap justify-content-center">
-          {activities.map((item) => <ActivityCard key={item.firebaseKey} activityObj={item} lessonPlan_id={firebaseKey} onUpdate={getLessonDetails} />)}
+          {activities.map((item) => <LessonActivityCard key={item.firebaseKey} lessonActivityObj={item} lessonPlan_id={firebaseKey} onUpdate={getLessonDetails} />)}
         </div>
       </div>
     </>
