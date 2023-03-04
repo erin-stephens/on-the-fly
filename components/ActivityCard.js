@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Card from 'react-bootstrap/Card';
 import { deleteActivity } from '../api/activityData';
+import AddtoLessonModal from './AddtoLessonModal';
 
 export default function ActivityCard({ activityObj, onUpdate }) {
   const deleteThisActivity = () => {
@@ -34,7 +35,7 @@ export default function ActivityCard({ activityObj, onUpdate }) {
               <Dropdown.Item href={`/activity/${activityObj.firebaseKey}`}>View</Dropdown.Item>
               <Dropdown.Item href={`/activity/edit/${activityObj.firebaseKey}`}>Edit</Dropdown.Item>
               <Dropdown.Item onClick={deleteThisActivity}>Delete</Dropdown.Item>
-              <Dropdown.Item>Add to Lesson</Dropdown.Item>
+              <Dropdown.Item><AddtoLessonModal obj={activityObj} /></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Card.Body>
