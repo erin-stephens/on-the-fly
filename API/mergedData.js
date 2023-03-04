@@ -4,7 +4,7 @@ import { clientCredentials } from '../utils/client';
 const endpoint = clientCredentials.databaseURL;
 // Create Merged Object
 const createMergedObj = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/merged.join`, {
+  fetch(`${endpoint}/merged.json`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

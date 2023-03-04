@@ -10,7 +10,7 @@ import { getAllLessons } from '../api/lessonData';
 import { createMergedObj, updateMergedObject } from '../api/mergedData';
 
 const initialState = {
-  lesson_id: '',
+  lessonPlan_id: '',
 };
 
 export default function AddtoLessonModal({ obj }) {
@@ -53,7 +53,7 @@ export default function AddtoLessonModal({ obj }) {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        Add to Lesson?
       </Button>
 
       <Modal show={show} onHide={handleClose}>

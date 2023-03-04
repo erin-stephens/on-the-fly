@@ -35,7 +35,7 @@ export default function ActivityCard({ activityObj, onUpdate }) {
               <Dropdown.Item href={`/activity/${activityObj.firebaseKey}`}>View</Dropdown.Item>
               <Dropdown.Item href={`/activity/edit/${activityObj.firebaseKey}`}>Edit</Dropdown.Item>
               <Dropdown.Item onClick={deleteThisActivity}>Delete</Dropdown.Item>
-              <Dropdown.Item><AddtoLessonModal /></Dropdown.Item>
+              <Dropdown.Item><AddtoLessonModal obj={activityObj} /></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Card.Body>
