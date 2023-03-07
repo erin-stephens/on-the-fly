@@ -19,6 +19,8 @@ a {
 
 body {
   background-color: #12323A;
+}
+h1 {
   color: white;
 }
 
@@ -27,4 +29,13 @@ body {
 }
 .navdropdown {
   color: white;
+}
+
+.activityScroll {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.activityCard {
+  width: 100%;
 }
