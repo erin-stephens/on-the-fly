@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Carousel } from 'react-bootstrap';
+import LessonCard from './LessonCard';
 import { getAllLessons } from '../api/lessonData';
 
 export default function LessonCarousel() {
-  // eslint-disable-next-line no-unused-vars
   const [lessons, setLessons] = useState([]);
+
   const getLessons = () => {
     getAllLessons().then(setLessons);
   };
@@ -11,6 +13,12 @@ export default function LessonCarousel() {
     getLessons();
   }, []);
   return (
-    <div>LessonCarousel</div>
+    <Carousel interval={null} className="lessonCarouselContainer">
+      {lessons.map((lesson) => (
+        <Carousel.Item className="lessonCarouselItem">
+          <LessonCard key={lesson.firebasekey} lessonObj={lesson} onUpdate={getLessons} />
+        </Carousel.Item>
+      ))}
+    </Carousel>
   );
 }

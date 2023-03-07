@@ -30,12 +30,3 @@ h1 {
 .navdropdown {
   color: white;
 }
-
-.activityScroll {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.activityCard {
-  width: 100%;
-}

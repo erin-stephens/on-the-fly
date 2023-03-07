@@ -11,7 +11,7 @@ export default function LessonCard({ lessonObj, onUpdate }) {
     }
   };
   return (
-    <Card>
+    <Card className="lessonCard" style={{ width: '40rem' }}>
       <Card.Img src="holder.js/100px180" />
       <Card.Body>
         <Card.Title>{lessonObj.lesson_name}</Card.Title>
