@@ -6,6 +6,7 @@ import { getAllActivities } from '../../api/activityData';
 import { getSingleLesson } from '../../api/lessonData';
 import { getMergedObjectsByLessonId } from '../../api/mergedData';
 import LessonActivityCard from '../../components/LessonActivityCard';
+import AddActivitytoLesson from '../../components/AddActivitytoLesson';
 
 export default function ViewLessonPlan() {
   const [lesson, setLesson] = useState({});
@@ -27,7 +28,7 @@ export default function ViewLessonPlan() {
 
   useEffect(() => {
     getLessonDetails();
-  }, [firebaseKey]);
+  }, [firebaseKey, activities]);
 
   return (
     <>
@@ -38,7 +39,10 @@ export default function ViewLessonPlan() {
         <h5>{lesson.lesson_name}</h5>
         <p>{lesson.directions}</p>
       </div>
-      <hr />
+      <div>
+        <AddActivitytoLesson obj={lesson} />
+      </div>
+      <hr className="text-white" />
       <div>
         <div className=" d-flex flex-wrap justify-content-center">
           {activities.map((item) => <LessonActivityCard key={item.firebaseKey} lessonActivityObj={item} lessonPlan_id={firebaseKey} onUpdate={getLessonDetails} />)}
