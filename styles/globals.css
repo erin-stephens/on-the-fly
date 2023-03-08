@@ -20,10 +20,21 @@ a {
 body {
   background-color: #12323A;
 }
+h1 {
+  color: white;
+}
 
 .navbar {
   background-color: #12323A;
 }
 .navdropdown {
   color: white;
+}
+.activityCarouselContainer {
+  display: flex;
+  justify-content: center;
+}
+.lessonCarouselContainer {
+  display: flex;
+  justify-content: center;
 }
