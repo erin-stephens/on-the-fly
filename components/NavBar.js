@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Navbar, NavDropdown } from 'react-bootstrap';
 import Logo from './Logo';
-import { signOut } from '../utils/auth';
+import UserProfile from './UserProfile';
 
 export default function NavBar() {
   return (
@@ -12,8 +12,8 @@ export default function NavBar() {
         <Link passHref href="/">
           <Navbar.Brand>
             <div style={{
-              height: '100px',
-              width: '100px',
+              height: '150px',
+              width: '150px',
             }}
             >
               <Logo />
@@ -33,10 +33,13 @@ export default function NavBar() {
           </NavDropdown.Item>
         </NavDropdown>
       </div>
-      <div className="signOutBtn">
-        <button type="button" className="btn btn-danger" onClick={signOut}>
-          Sign Out
-        </button>
+      <div
+        className="signOutBtn"
+        style={{
+          padding: '0px 20px 0px 0px',
+        }}
+      >
+        <UserProfile />
       </div>
     </Navbar>
   );
