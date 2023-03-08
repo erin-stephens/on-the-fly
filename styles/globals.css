@@ -30,3 +30,11 @@ h1 {
 .navdropdown {
   color: white;
 }
+.activityCarouselContainer {
+  display: flex;
+  justify-content: center;
+}
+.lessonCarouselContainer {
+  display: flex;
+  justify-content: center;
+}
