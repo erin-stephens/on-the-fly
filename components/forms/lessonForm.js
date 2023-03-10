@@ -64,15 +64,26 @@ export default function LessonForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput3" label="Subject" className="mb-3">
-        <Form.Control
+      <FloatingLabel
+        controlId="floatingInput3"
+        label="Subject"
+        className="mb-3"
+      >
+        <Form.Select
           type="text"
-          placeholder="Enter subject"
           name="subject"
           value={formInput.subject}
           onChange={handleChange}
           required
-        />
+        >
+          <option value="">Select a Subject</option>
+          <option value="math">Math</option>
+          <option value="reading">Reading</option>
+          <option value="science">Science</option>
+          <option value="social studies">Social Studies</option>
+          <option value="brain breaks">Brain Breaks</option>
+          <option value="indoor recess">Indoor Recess</option>
+        </Form.Select>
       </FloatingLabel>
       <FloatingLabel controlId="floatingInput4" label="Class" className="mb-3">
         <Form.Control
