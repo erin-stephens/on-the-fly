@@ -52,7 +52,7 @@ export default function LessonForm({ obj }) {
   return (
 
     <Form onSubmit={handleSubmit}>
-      <h2>{obj.firebaseKey ? 'Update' : 'Create'} A Lesson</h2>
+      <h2 className="text-white">{obj.firebaseKey ? 'Update' : 'Create'} A Lesson</h2>
 
       <FloatingLabel controlId="floatingInput1" label="Lesson Name" className="mb-3">
         <Form.Control
@@ -107,7 +107,7 @@ export default function LessonForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Lesson</Button>
+      <Button type="submit" className="redBtn btn">{obj.firebaseKey ? 'Update' : 'Create'} Lesson</Button>
     </Form>
   );
 }

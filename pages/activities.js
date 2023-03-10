@@ -21,7 +21,7 @@ export default function ActivitiesPage() {
         <title>All Activities</title>
       </Head>
       <>
-        <Link passHref href="/activity/new"><button type="button">Add an Activity</button></Link>
+        <Link passHref href="/activity/new"><button className="redBtn btn" type="button">Add an Activity</button></Link>
       </>
       <h1> All Activities </h1>
       <div className="d-flex flex-wrap">

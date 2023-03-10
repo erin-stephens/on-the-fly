@@ -48,3 +48,14 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+.logoContainer {
+  padding-left: 20px;
+}
+.redBtn {
+  background-color: #FF5A5F; 
+  color: white;
+  border: none;
+}
+.dropdownBtn {
+  background-color: #0C91BF;
+}

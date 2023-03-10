@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
@@ -47,9 +46,9 @@ export default function AddActivitytoLesson({ obj }) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <button type="button" className="redBtn btn" onClick={handleShow}>
         Add Activity?
-      </Button>
+      </button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -81,9 +80,9 @@ export default function AddActivitytoLesson({ obj }) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleSubmit}>
+          <button type="button" className="redBtn btn" onClick={handleSubmit}>
             Add
-          </Button>
+          </button>
         </Modal.Footer>
       </Modal>
     </>
