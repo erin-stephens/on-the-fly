@@ -26,6 +26,8 @@ h1 {
 
 .navbar {
   background-color: #12323A;
+  display: flex;
+  justify-content: space-between;
 }
 .navdropdown {
   color: white;
@@ -37,4 +39,12 @@ h1 {
 .lessonCarouselContainer {
   display: flex;
   justify-content: center;
+}
+.userProfileContainer {
+  display: flex;
+  padding-right: 20px;
+}
+.lessonCard {
+  display: flex;
+  flex-direction: column;
 }
