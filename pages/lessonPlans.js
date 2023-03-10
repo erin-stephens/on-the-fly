@@ -21,7 +21,7 @@ export default function LessonPlansPage() {
         <title>All Lessons</title>
       </Head>
       <>
-        <Link passHref href="/lesson/new"><button type="button">Create a Lesson</button></Link>
+        <Link passHref href="/lesson/new"><button type="button" className="redBtn btn">Create a Lesson</button></Link>
       </>
       <h1> All Lessons </h1>
       {lessons.map((lesson) => (

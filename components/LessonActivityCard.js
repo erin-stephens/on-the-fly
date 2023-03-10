@@ -30,7 +30,10 @@ export default function LessonActivityCard({ lessonActivityObj, lessonPlan_id, o
             Grade: {lessonActivityObj.grade}
           </Card.Text>
           <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
+            <Dropdown.Toggle
+              className="dropdownBtn"
+              id="dropdown-basic"
+            >
               Options
             </Dropdown.Toggle>
 

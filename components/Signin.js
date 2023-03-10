@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './Logo';
 import { signIn } from '../utils/auth';
 
 function Signin() {
@@ -12,12 +13,13 @@ function Signin() {
         margin: '0 auto',
       }}
     >
-      <h1>Hi there!</h1>
-      <p>Click the button below to login!</p>
-      <button type="button" className="btn btn-primary btn-lg copy-btn" onClick={signIn}>
+      <h1 className="text-white">Need a plan? Sign in Below!</h1>
+      <Logo />
+      <button type="button" className="redBtn btn btn-lg copy-btn" onClick={signIn}>
         Sign In
       </button>
     </div>
+
   );
 }
 

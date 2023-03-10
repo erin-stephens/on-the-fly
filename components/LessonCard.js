@@ -22,7 +22,7 @@ export default function LessonCard({ lessonObj, onUpdate }) {
           <Card.Text>{lessonObj.class}</Card.Text>
           <Card.Text>{lessonObj.username}</Card.Text>
           <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
+            <Dropdown.Toggle className="dropdownBtn" id="dropdown-basic">
               Options
             </Dropdown.Toggle>
 

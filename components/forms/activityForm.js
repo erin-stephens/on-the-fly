@@ -55,7 +55,7 @@ export default function ActivityForm({ obj }) {
   return (
 
     <Form onSubmit={handleSubmit}>
-      <h2>{obj.firebaseKey ? 'Update' : 'Create'} An Activity</h2>
+      <h2 className="text-white">{obj.firebaseKey ? 'Update' : 'Create'} An Activity</h2>
 
       <FloatingLabel controlId="floatingInput1" label="Activity Name" className="mb-3">
         <Form.Control
@@ -119,7 +119,7 @@ export default function ActivityForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Activity</Button>
+      <Button type="submit" className="redBtn btn">{obj.firebaseKey ? 'Update' : 'Create'} Activity</Button>
     </Form>
   );
 }

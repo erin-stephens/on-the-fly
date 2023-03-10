@@ -8,12 +8,12 @@ import UserProfile from './UserProfile';
 export default function NavBar() {
   return (
     <Navbar expand="lg">
-      <div>
+      <div className="logoContainer">
         <Link passHref href="/">
           <Navbar.Brand>
             <div style={{
-              height: '150px',
-              width: '150px',
+              height: '100px',
+              width: '100px',
             }}
             >
               <Logo />
