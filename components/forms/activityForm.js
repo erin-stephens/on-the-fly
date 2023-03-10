@@ -77,15 +77,26 @@ export default function ActivityForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput3" label="Subject" className="mb-3">
-        <Form.Control
+      <FloatingLabel
+        controlId="floatingInput3"
+        label="Subject"
+        className="mb-3"
+      >
+        <Form.Select
           type="text"
-          placeholder="Enter subject"
           name="subject"
           value={formInput.subject}
           onChange={handleChange}
           required
-        />
+        >
+          <option value="">Select a Subject</option>
+          <option value="math">Math</option>
+          <option value="reading">Reading</option>
+          <option value="science">Science</option>
+          <option value="social studies">Social Studies</option>
+          <option value="brain breaks">Brain Breaks</option>
+          <option value="indoor recess">Indoor Recess</option>
+        </Form.Select>
       </FloatingLabel>
       <FloatingLabel controlId="floatingInput4" label="Activity Length" className="mb-3">
         <Form.Control
@@ -97,15 +108,26 @@ export default function ActivityForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput5" label="Grade Level" className="mb-3">
-        <Form.Control
-          type="number"
-          placeholder="Enter grade level"
+      <FloatingLabel
+        controlId="floatingInput3"
+        label="Grade"
+        className="mb-3"
+      >
+        <Form.Select
+          type="text"
           name="grade"
           value={formInput.grade}
           onChange={handleChange}
           required
-        />
+        >
+          <option value="">Select a Grade</option>
+          <option value="Kindergarten">Kindergarten</option>
+          <option value="1st">1st</option>
+          <option value="2nd">2nd</option>
+          <option value="3rd">3rd</option>
+          <option value="4th">4th</option>
+          <option value="5th">5th</option>
+        </Form.Select>
       </FloatingLabel>
       <FloatingLabel controlId="floatingTextarea1" label="Description">
         <Form.Control
@@ -130,7 +152,7 @@ ActivityForm.propTypes = {
     activity_url: PropTypes.string,
     length: PropTypes.number,
     subject: PropTypes.string,
-    grade: PropTypes.number,
+    grade: PropTypes.string,
     description: PropTypes.string,
     firebaseKey: PropTypes.string,
   }),
