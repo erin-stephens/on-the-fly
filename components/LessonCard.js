@@ -12,24 +12,28 @@ export default function LessonCard({ lessonObj, onUpdate }) {
   };
   return (
     <Card className="lessonCard" style={{ width: '40rem' }}>
-      <Card.Img src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>{lessonObj.lesson_name}</Card.Title>
-        <Card.Text>{lessonObj.subject}</Card.Text>
-        <Card.Text>{lessonObj.class}</Card.Text>
-        <Card.Text>{lessonObj.username}</Card.Text>
-        <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            Options
-          </Dropdown.Toggle>
+      <div>
+        <Card.Img src="holder.js/100px180" />
+      </div>
+      <div>
+        <Card.Body>
+          <Card.Title>{lessonObj.lesson_name}</Card.Title>
+          <Card.Text>{lessonObj.subject}</Card.Text>
+          <Card.Text>{lessonObj.class}</Card.Text>
+          <Card.Text>{lessonObj.username}</Card.Text>
+          <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Options
+            </Dropdown.Toggle>
 
-          <Dropdown.Menu>
-            <Dropdown.Item href={`/lesson/${lessonObj.firebaseKey}`}>View</Dropdown.Item>
-            <Dropdown.Item href={`/lesson/edit/${lessonObj.firebaseKey}`}>Edit</Dropdown.Item>
-            <Dropdown.Item onClick={deleteThisLesson}>Delete</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-      </Card.Body>
+            <Dropdown.Menu>
+              <Dropdown.Item href={`/lesson/${lessonObj.firebaseKey}`}>View</Dropdown.Item>
+              <Dropdown.Item href={`/lesson/edit/${lessonObj.firebaseKey}`}>Edit</Dropdown.Item>
+              <Dropdown.Item onClick={deleteThisLesson}>Delete</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Card.Body>
+      </div>
     </Card>
   );
 }

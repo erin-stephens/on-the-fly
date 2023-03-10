@@ -12,7 +12,7 @@ export default function UserProfile() {
   const handleShow = () => setShow(true);
 
   return (
-    <>
+    <div className="profileModal">
       <Image
         src={user.photoURL}
         alt="User"
@@ -42,6 +42,6 @@ export default function UserProfile() {
           </button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   );
 }

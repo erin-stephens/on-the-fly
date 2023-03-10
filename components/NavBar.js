@@ -34,10 +34,7 @@ export default function NavBar() {
         </NavDropdown>
       </div>
       <div
-        className="signOutBtn"
-        style={{
-          padding: '0px 20px 0px 0px',
-        }}
+        className="userProfileContainer"
       >
         <UserProfile />
       </div>
