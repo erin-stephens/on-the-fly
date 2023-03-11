@@ -24,9 +24,11 @@ export default function LessonPlansPage() {
         <Link passHref href="/lesson/new"><button type="button" className="redBtn btn">Create a Lesson</button></Link>
       </>
       <h1> All Lessons </h1>
-      {lessons.map((lesson) => (
-        <LessonCard key={lesson.firebaseKey} lessonObj={lesson} onUpdate={getLessons} />
-      ))}
+      <div className="lessonCardContainer">
+        {lessons.map((lesson) => (
+          <LessonCard key={lesson.firebaseKey} lessonObj={lesson} onUpdate={getLessons} />
+        ))}
+      </div>
     </div>
   );
 }

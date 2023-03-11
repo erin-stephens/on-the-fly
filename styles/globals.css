@@ -46,7 +46,8 @@ h1 {
 }
 .lessonCard {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin: 5px;
 }
 .logoContainer {
   padding-left: 20px;
@@ -58,4 +59,16 @@ h1 {
 }
 .dropdownBtn {
   background-color: #0C91BF;
+}
+.lessonCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.activityCard {
+  margin: 5px;
+}
+.lessonImage {
+  width: 30%;
+  border: solid;
+  border-color: #FF5A5F;
 }

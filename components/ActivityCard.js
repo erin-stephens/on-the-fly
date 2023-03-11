@@ -4,6 +4,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Card from 'react-bootstrap/Card';
 import { deleteActivity } from '../api/activityData';
 import AddtoLessonModal from './AddtoLessonModal';
+import { useAuth } from '../utils/context/authContext';
 
 export default function ActivityCard({ activityObj, onUpdate }) {
   const deleteThisActivity = () => {
@@ -11,7 +12,7 @@ export default function ActivityCard({ activityObj, onUpdate }) {
       deleteActivity(activityObj.firebaseKey).then(() => onUpdate());
     }
   };
-
+  const { user } = useAuth();
   return (
     <>
       <Card className="activityCard" style={{ width: '19rem' }}>
@@ -33,8 +34,12 @@ export default function ActivityCard({ activityObj, onUpdate }) {
 
             <Dropdown.Menu>
               <Dropdown.Item href={`/activity/${activityObj.firebaseKey}`}>View</Dropdown.Item>
-              <Dropdown.Item href={`/activity/edit/${activityObj.firebaseKey}`}>Edit</Dropdown.Item>
-              <Dropdown.Item onClick={deleteThisActivity}>Delete</Dropdown.Item>
+              {activityObj.uid === user.uid ? (
+                <Dropdown.Item href={`/activity/edit/${activityObj.firebaseKey}`}>Edit</Dropdown.Item>
+              ) : ''}
+              {activityObj.uid === user.uid ? (
+                <Dropdown.Item onClick={deleteThisActivity}>Delete</Dropdown.Item>
+              ) : ''}
               <Dropdown.Item><AddtoLessonModal obj={activityObj} /></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -51,6 +56,7 @@ ActivityCard.propTypes = {
     length: PropTypes.number,
     grade: PropTypes.number,
     firebaseKey: PropTypes.string,
+    uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };

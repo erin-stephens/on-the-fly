@@ -2,6 +2,7 @@ import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Card from 'react-bootstrap/Card';
 import PropTypes from 'prop-types';
+import { useAuth } from '../utils/context/authContext';
 import { deleteLesson } from '../api/lessonData';
 
 export default function LessonCard({ lessonObj, onUpdate }) {
@@ -10,11 +11,13 @@ export default function LessonCard({ lessonObj, onUpdate }) {
       deleteLesson(lessonObj.firebaseKey).then(() => onUpdate());
     }
   };
+  const { user } = useAuth();
   return (
-    <Card className="lessonCard" style={{ width: '40rem' }}>
-      <div>
+    <Card className="lessonCard" style={{ width: '30rem' }}>
+      <div className="lessonImage">
         <Card.Img src="holder.js/100px180" />
       </div>
+      <hr />
       <div>
         <Card.Body>
           <Card.Title>{lessonObj.lesson_name}</Card.Title>
@@ -28,8 +31,12 @@ export default function LessonCard({ lessonObj, onUpdate }) {
 
             <Dropdown.Menu>
               <Dropdown.Item href={`/lesson/${lessonObj.firebaseKey}`}>View</Dropdown.Item>
-              <Dropdown.Item href={`/lesson/edit/${lessonObj.firebaseKey}`}>Edit</Dropdown.Item>
-              <Dropdown.Item onClick={deleteThisLesson}>Delete</Dropdown.Item>
+              {lessonObj.uid === user.uid ? (
+                <Dropdown.Item href={`/lesson/edit/${lessonObj.firebaseKey}`}>Edit</Dropdown.Item>
+              ) : ''}
+              {lessonObj.uid === user.uid ? (
+                <Dropdown.Item onClick={deleteThisLesson}>Delete</Dropdown.Item>
+              ) : ''}
             </Dropdown.Menu>
           </Dropdown>
         </Card.Body>
@@ -45,6 +52,7 @@ LessonCard.propTypes = {
     class: PropTypes.string,
     firebaseKey: PropTypes.string,
     username: PropTypes.string,
+    uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
