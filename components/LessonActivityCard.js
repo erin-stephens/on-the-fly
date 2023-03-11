@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Card from 'react-bootstrap/Card';
+import { useAuth } from '../utils/context/authContext';
 import AddtoLessonModal from './AddtoLessonModal';
 import { deleteMergedObj, getSingleMergedObj } from '../api/mergedData';
 
@@ -14,6 +15,7 @@ export default function LessonActivityCard({ lessonActivityObj, lessonPlan_id, o
       });
     }
   };
+  const { user } = useAuth();
 
   return (
     <>
@@ -39,8 +41,12 @@ export default function LessonActivityCard({ lessonActivityObj, lessonPlan_id, o
 
             <Dropdown.Menu>
               <Dropdown.Item href={`/activity/${lessonActivityObj.firebaseKey}`}>View</Dropdown.Item>
-              <Dropdown.Item href={`/activity/edit/${lessonActivityObj.firebaseKey}`}>Edit</Dropdown.Item>
-              <Dropdown.Item onClick={removeThisActivity}>Remove</Dropdown.Item>
+              {lessonActivityObj.uid === user.uid ? (
+                <Dropdown.Item href={`/activity/edit/${lessonActivityObj.firebaseKey}`}>Edit</Dropdown.Item>
+              ) : ''}
+              {lessonActivityObj.uid === user.uid ? (
+                <Dropdown.Item onClick={removeThisActivity}>Remove</Dropdown.Item>
+              ) : ''}
               <Dropdown.Item><AddtoLessonModal obj={lessonActivityObj} /></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -57,6 +63,7 @@ LessonActivityCard.propTypes = {
     length: PropTypes.number,
     grade: PropTypes.number,
     firebaseKey: PropTypes.string,
+    uid: PropTypes.string,
   }).isRequired,
   lessonPlan_id: PropTypes.string.isRequired,
   onUpdate: PropTypes.func.isRequired,
