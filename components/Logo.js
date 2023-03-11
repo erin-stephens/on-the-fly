@@ -5,7 +5,7 @@ import logo from '../src/assets/images/logo.png';
 export default function Logo() {
   return (
     <>
-      <Image src={logo} alt="Logo" />
+      <Image src={logo} alt="Logo" className="logo" />
     </>
   );
 }

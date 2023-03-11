@@ -44,9 +44,7 @@ export default function LessonActivityCard({ lessonActivityObj, lessonPlan_id, o
               {lessonActivityObj.uid === user.uid ? (
                 <Dropdown.Item href={`/activity/edit/${lessonActivityObj.firebaseKey}`}>Edit</Dropdown.Item>
               ) : ''}
-              {lessonActivityObj.uid === user.uid ? (
-                <Dropdown.Item onClick={removeThisActivity}>Remove</Dropdown.Item>
-              ) : ''}
+              <Dropdown.Item onClick={removeThisActivity}>Remove</Dropdown.Item>
               <Dropdown.Item><AddtoLessonModal obj={lessonActivityObj} /></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
