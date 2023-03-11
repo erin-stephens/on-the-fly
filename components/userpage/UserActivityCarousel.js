@@ -19,7 +19,7 @@ export default function UserActivityCarousel() {
   }, [user]);
 
   return (
-    <Carousel interval={null} variant="dark">
+    <Carousel interval={null}>
       {activities.map((activity) => (
         <Carousel.Item className="activityCarouselItem">
           <ActivityCard key={activity.firebasekey} activityObj={activity} onUpdate={getActivities} />

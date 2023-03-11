@@ -31,13 +31,13 @@ export default function UserProfile() {
             onClick={handleShow}
             roundedCircle
           />
-          <div>
+          <div className="profileDetails">
             <h6>{user.displayName}</h6>
             <h6>{user.email}</h6>
           </div>
         </Modal.Header>
         <Modal.Footer>
-          <button type="button" className="btn btn-danger" onClick={signOut}>
+          <button type="button" className="btn redBtn" onClick={signOut}>
             Sign Out
           </button>
         </Modal.Footer>

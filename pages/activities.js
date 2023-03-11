@@ -24,7 +24,7 @@ export default function ActivitiesPage() {
         <Link passHref href="/activity/new"><button className="redBtn btn" type="button">Add an Activity</button></Link>
       </>
       <h1> All Activities </h1>
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap activityCardContainer">
         {activities.map((activity) => (
           <ActivityCard key={activity.firebasekey} activityObj={activity} onUpdate={getActivities} />
         ))}

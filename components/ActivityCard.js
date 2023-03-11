@@ -22,7 +22,7 @@ export default function ActivityCard({ activityObj, onUpdate }) {
         <Card.Body>
           <Card.Title>{activityObj.activity_name}</Card.Title>
           <Card.Text>
-            Length: {activityObj.length}
+            Length: {activityObj.length} minutes
           </Card.Text>
           <Card.Text>
             Grade: {activityObj.grade}

@@ -14,6 +14,7 @@ const initialState = {
   subject: '',
   grade: '',
   description: '',
+  username: '',
 };
 
 export default function ActivityForm({ obj }) {
@@ -41,7 +42,7 @@ export default function ActivityForm({ obj }) {
       updateActivity(formInput)
         .then(() => router.push('/activities'));
     } else {
-      const payload = { ...formInput, uid: user.uid };
+      const payload = { ...formInput, uid: user.uid, username: user.displayName };
       createActivity(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 
@@ -155,6 +156,7 @@ ActivityForm.propTypes = {
     grade: PropTypes.string,
     description: PropTypes.string,
     firebaseKey: PropTypes.string,
+    username: PropTypes.string,
   }),
 };
 

@@ -16,7 +16,7 @@ export default function UserLessonCarousel() {
     getLessons();
   }, [user]);
   return (
-    <Carousel interval={null} variant="dark" className="lessonCarouselContainer">
+    <Carousel interval={null} className="lessonCarouselContainer">
       {lessons.map((lesson) => (
         <Carousel.Item className="lessonCarouselItem">
           <LessonCard key={lesson.firebasekey} lessonObj={lesson} onUpdate={getLessons} />
