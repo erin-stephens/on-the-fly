@@ -1,9 +1,16 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Card from 'react-bootstrap/Card';
 import PropTypes from 'prop-types';
 import { useAuth } from '../utils/context/authContext';
 import { deleteLesson } from '../api/lessonData';
+import math from '../src/assets/icons/math.png';
+import reading from '../src/assets/icons/reading.png';
+import science from '../src/assets/icons/science.png';
+import socialStudies from '../src/assets/icons/social-studies.png';
+import brainBreak from '../src/assets/icons/brain-break.png';
+import indoorRecess from '../src/assets/icons/indoor-recess.png';
 
 export default function LessonCard({ lessonObj, onUpdate }) {
   const deleteThisLesson = () => {
@@ -11,11 +18,32 @@ export default function LessonCard({ lessonObj, onUpdate }) {
       deleteLesson(lessonObj.firebaseKey).then(() => onUpdate());
     }
   };
+  const [subjects, setSubjects] = useState([]);
   const { user } = useAuth();
+  const lessonIcon = () => {
+    switch (subjects) {
+      case 'math':
+        return <Card.Img src={math} alt="math" className="icon" />;
+      case 'reading':
+        return <Card.Img src={reading} alt="reading" className="icon" />;
+      case 'science':
+        return <Card.Img src={science} alt="science" className="icon" />;
+      case 'social studies':
+        return <Card.Img src={socialStudies} alt="social studies" className="icon" />;
+      case 'brain break':
+        return <Card.Img src={brainBreak} alt="brain break" className="icon" />;
+      case 'indoor recess':
+        return <Card.Img src={indoorRecess} alt="indoor recess" className="icon" />;
+      default:
+        return null;
+    }
+  };
   return (
     <Card className="lessonCard" style={{ width: '30rem' }}>
       <div className="lessonImage">
-        <Card.Img src="holder.js/100px180" />
+        {subjects.map((subject) => (
+          { lessonIcon }
+        ))}
       </div>
       <hr />
       <div>
