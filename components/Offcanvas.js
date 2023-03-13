@@ -19,7 +19,7 @@ export default function OffcanvasMenu() {
           <Nav onClick={handleClose}>
             <Link href="/">Home
             </Link>
-            <Link href="/myPage" passHref>My Page
+            <Link href="/myPage" passHref>My Resources
             </Link>
             <Link href="/activities" passHref> View Activities
             </Link>
