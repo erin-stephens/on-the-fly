@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Card from 'react-bootstrap/Card';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import { useAuth } from '../utils/context/authContext';
 import { deleteLesson } from '../api/lessonData';
@@ -18,32 +19,29 @@ export default function LessonCard({ lessonObj, onUpdate }) {
       deleteLesson(lessonObj.firebaseKey).then(() => onUpdate());
     }
   };
-  const [subjects, setSubjects] = useState([]);
   const { user } = useAuth();
   const lessonIcon = () => {
-    switch (subjects) {
+    switch (lessonObj.subject) {
       case 'math':
-        return <Card.Img src={math} alt="math" className="icon" />;
+        return <Image src={math} alt="math" className="icon" />;
       case 'reading':
-        return <Card.Img src={reading} alt="reading" className="icon" />;
+        return <Image src={reading} alt="reading" className="icon" />;
       case 'science':
-        return <Card.Img src={science} alt="science" className="icon" />;
+        return <Image src={science} alt="science" className="icon" />;
       case 'social studies':
-        return <Card.Img src={socialStudies} alt="social studies" className="icon" />;
+        return <Image src={socialStudies} alt="social studies" className="icon" />;
       case 'brain break':
-        return <Card.Img src={brainBreak} alt="brain break" className="icon" />;
+        return <Image src={brainBreak} alt="brain break" className="icon" />;
       case 'indoor recess':
-        return <Card.Img src={indoorRecess} alt="indoor recess" className="icon" />;
+        return <Image src={indoorRecess} alt="indoor recess" className="icon" />;
       default:
         return null;
     }
   };
   return (
-    <Card className="lessonCard" style={{ width: '30rem' }}>
+    <Card className="lessonCard" style={{ width: '30rem', height: '11rem' }}>
       <div className="lessonImage">
-        {subjects.map((subject) => (
-          { lessonIcon }
-        ))}
+        {lessonIcon(lessonObj.subject)}
       </div>
       <hr />
       <div>

@@ -77,6 +77,9 @@ h1 {
   width: 30%;
   border: solid;
   border-color: #FF5A5F;
+  background-color: #FF5A5F;
+  display: flex;
+  align-items: center;
 }
 .profileDetails {
   margin: 15px;
