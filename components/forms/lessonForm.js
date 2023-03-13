@@ -81,7 +81,7 @@ export default function LessonForm({ obj }) {
           <option value="reading">Reading</option>
           <option value="science">Science</option>
           <option value="social studies">Social Studies</option>
-          <option value="brain breaks">Brain Breaks</option>
+          <option value="brain break">Brain Break</option>
           <option value="indoor recess">Indoor Recess</option>
         </Form.Select>
       </FloatingLabel>
