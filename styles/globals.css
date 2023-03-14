@@ -27,10 +27,23 @@ h1 {
 .navbar {
   background-color: #12323A;
   display: flex;
-  justify-content: space-between;
 }
 .navdropdown {
   color: white;
+}
+.hamburgerBtn {
+  display: flex;
+  flex-grow: 1;
+}
+.userProfileContainer {
+  display: flex;
+  padding-right: 20px;
+  flex-grow: 8;
+  justify-content: flex-end;
+}
+.logoContainer {
+  padding: 20px 0px 0px 20px;
+  flex-grow: 1;
 }
 .activityCarouselContainer {
   display: flex;
@@ -40,22 +53,18 @@ h1 {
   display: flex;
   justify-content: center;
 }
-.userProfileContainer {
-  display: flex;
-  padding-right: 20px;
-}
 .lessonCard {
   display: flex;
   flex-direction: row;
   margin: 5px;
 }
-.logoContainer {
-  padding-left: 20px;
-}
 .redBtn {
   background-color: #FF5A5F; 
   color: white;
   border: none;
+}
+.redBtn:hover {
+  background-color: #FF5A5F;
 }
 .dropdownBtn {
   background-color: #0C91BF;
@@ -97,4 +106,19 @@ h1 {
   background-color: #0C91BF;
   display: flex;
   flex-direction: column;
+}
+.videoContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.activityVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
