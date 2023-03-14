@@ -20,9 +20,9 @@ export default function ActivitiesPage() {
       <Head>
         <title>All Activities</title>
       </Head>
-      <>
+      <div className="addActivityContainer">
         <Link passHref href="/activity/new"><button className="redBtn btn" type="button">Add an Activity</button></Link>
-      </>
+      </div>
       <h1> All Activities </h1>
       <div className="d-flex flex-wrap activityCardContainer">
         {activities.map((activity) => (

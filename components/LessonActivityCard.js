@@ -19,14 +19,14 @@ export default function LessonActivityCard({ lessonActivityObj, lessonPlan_id, o
 
   return (
     <>
-      <Card style={{ width: '19rem' }}>
+      <Card className="lessonActivityCard" style={{ width: '19rem' }}>
         <div className="video-url">
           <iframe className="card-video" src={`${lessonActivityObj.activity_url}?modestbranding=1&showinfo=0&mute=1`} title={lessonActivityObj.activity_name} />
         </div>
         <Card.Body>
           <Card.Title>{lessonActivityObj.activity_name}</Card.Title>
           <Card.Text>
-            Length: {lessonActivityObj.length}
+            Length: {lessonActivityObj.length} minutes
           </Card.Text>
           <Card.Text>
             Grade: {lessonActivityObj.grade}
@@ -44,7 +44,9 @@ export default function LessonActivityCard({ lessonActivityObj, lessonPlan_id, o
               {lessonActivityObj.uid === user.uid ? (
                 <Dropdown.Item href={`/activity/edit/${lessonActivityObj.firebaseKey}`}>Edit</Dropdown.Item>
               ) : ''}
-              <Dropdown.Item onClick={removeThisActivity}>Remove</Dropdown.Item>
+              {lessonActivityObj.uid === user.uid ? (
+                <Dropdown.Item onClick={removeThisActivity}>Remove</Dropdown.Item>
+              ) : ''}
               <Dropdown.Item><AddtoLessonModal obj={lessonActivityObj} /></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -58,8 +60,8 @@ LessonActivityCard.propTypes = {
   lessonActivityObj: PropTypes.shape({
     activity_url: PropTypes.string,
     activity_name: PropTypes.string,
-    length: PropTypes.number,
-    grade: PropTypes.number,
+    length: PropTypes.string,
+    grade: PropTypes.string,
     firebaseKey: PropTypes.string,
     uid: PropTypes.string,
   }).isRequired,

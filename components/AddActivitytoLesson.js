@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import { useAuth } from '../utils/context/authContext';
 import { getAllActivities } from '../api/activityData';
 import { createMergedObj, updateMergedObject } from '../api/mergedData';
 
@@ -18,6 +19,7 @@ export default function AddActivitytoLesson({ obj }) {
 
   const [formInput, setFormInput] = useState(initialState);
   const [activities, setActivities] = useState([]);
+  const { user } = useAuth();
 
   useEffect(() => {
     getAllActivities().then(setActivities);
@@ -46,10 +48,11 @@ export default function AddActivitytoLesson({ obj }) {
 
   return (
     <>
-      <button type="button" className="redBtn btn" onClick={handleShow}>
-        Add Activity?
-      </button>
-
+      {obj.uid === user.uid ? (
+        <button type="button" className="redBtn btn" onClick={handleShow}>
+          Add Activity?
+        </button>
+      ) : ''}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Add Activity</Modal.Title>
@@ -92,5 +95,6 @@ export default function AddActivitytoLesson({ obj }) {
 AddActivitytoLesson.propTypes = {
   obj: PropTypes.shape({
     firebaseKey: PropTypes.string,
+    uid: PropTypes.string,
   }).isRequired,
 };

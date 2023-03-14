@@ -15,8 +15,7 @@ export default function Home() {
           <UserActivityCarousel />
         </div>
       </div>
-      <hr />
-      <div>
+      <div className="lessonIndex">
         <h1>All Lesson Plans</h1>
         <div className="lessonCarouselContainer">
           <UserLessonCarousel />
