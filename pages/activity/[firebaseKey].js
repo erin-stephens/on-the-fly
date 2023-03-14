@@ -19,10 +19,11 @@ export default function ViewActivity() {
       <Head>
         <title>{activity.activity_name}</title>
       </Head>
-      <div>
+      <div className="videoContainer">
         <iframe
           title={activity.activity_name}
           src={activity.activity_url}
+          className="activityVideo"
         />
       </div>
       <div className="text-white">

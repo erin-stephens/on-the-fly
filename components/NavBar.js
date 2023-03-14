@@ -8,28 +8,30 @@ import OffcanvasMenu from './Offcanvas';
 
 export default function NavBar() {
   return (
-    <Navbar expand="lg">
-      <div className="logoContainer">
-        <Link passHref href="/">
-          <Navbar.Brand>
-            <div style={{
-              height: '100px',
-              width: '100px',
-            }}
-            >
-              <Logo />
-            </div>
-          </Navbar.Brand>
-        </Link>
-      </div>
-      <div>
-        <OffcanvasMenu />
-      </div>
-      <div
-        className="userProfileContainer"
-      >
-        <UserProfile />
-      </div>
-    </Navbar>
+    <div>
+      <Navbar>
+        <div className="logoContainer">
+          <Link passHref href="/">
+            <Navbar.Brand>
+              <div style={{
+                height: '100px',
+                width: '100px',
+              }}
+              >
+                <Logo />
+              </div>
+            </Navbar.Brand>
+          </Link>
+        </div>
+        <div className="hamburgerBtn">
+          <OffcanvasMenu />
+        </div>
+        <div
+          className="userProfileContainer"
+        >
+          <UserProfile />
+        </div>
+      </Navbar>
+    </div>
   );
 }
