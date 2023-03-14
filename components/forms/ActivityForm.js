@@ -151,7 +151,7 @@ ActivityForm.propTypes = {
   obj: PropTypes.shape({
     activity_name: PropTypes.string,
     activity_url: PropTypes.string,
-    length: PropTypes.number,
+    length: PropTypes.string,
     subject: PropTypes.string,
     grade: PropTypes.string,
     description: PropTypes.string,

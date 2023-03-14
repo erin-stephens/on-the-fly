@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { getSingleActivity } from '../../api/activityData';
+import AddtoLessonModal from '../../components/AddtoLessonModal';
 
 export default function ViewActivity() {
   const [activity, setActivity] = useState([]);
@@ -24,6 +25,7 @@ export default function ViewActivity() {
           title={activity.activity_name}
           src={activity.activity_url}
           className="activityVideo"
+          allowFullScreen=""
         />
       </div>
       <div className="text-white">
@@ -33,6 +35,9 @@ export default function ViewActivity() {
         <h5>Grade: {activity.grade}</h5>
         <h5>Added by: {activity.username}</h5>
         <p>Description: {activity.description}</p>
+      </div>
+      <div className="addtolesson">
+        <AddtoLessonModal />
       </div>
     </>
   );

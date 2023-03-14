@@ -1,11 +1,11 @@
 @import 'bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 a {
@@ -21,15 +21,18 @@ body {
   background-color: #12323A;
 }
 h1 {
-  color: white;
+  color: #E6EBE0;
 }
 
 .navbar {
   background-color: #12323A;
   display: flex;
+  position: sticky;
+  width: 100%;
+  height: 100px;
 }
 .navdropdown {
-  color: white;
+  color: #E6EBE0;
 }
 .hamburgerBtn {
   display: flex;
@@ -38,11 +41,12 @@ h1 {
 .userProfileContainer {
   display: flex;
   padding-right: 20px;
-  flex-grow: 8;
+  flex-grow: 12;
   justify-content: flex-end;
 }
 .logoContainer {
-  padding: 20px 0px 0px 20px;
+  margin-top: 40px;
+  margin-left: 20px;
   flex-grow: 1;
 }
 .activityCarouselContainer {
@@ -53,6 +57,9 @@ h1 {
   display: flex;
   justify-content: center;
 }
+.lessonIndex {
+  margin-top: 60px;
+}
 .lessonCard {
   display: flex;
   flex-direction: row;
@@ -60,7 +67,7 @@ h1 {
 }
 .redBtn {
   background-color: #FF5A5F; 
-  color: white;
+  color: whitesmoke;
   border: none;
 }
 .redBtn:hover {
@@ -68,19 +75,33 @@ h1 {
 }
 .dropdownBtn {
   background-color: #0C91BF;
+  border: #12323A;
+  color: #E6EBE0;
+}
+.dropdownBtn:hover {
+  background-color: #12323A
+}
+.addLessonContainer {
+  display: flex;
+  justify-content: right;
 }
 .lessonCardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.addActivityContainer {
+  display: flex;
+  justify-content: right;
+}
 .activityCardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.activityCard {
+.activityCard, .lessonActivityCard {
   margin: 5px;
+  background-color: #E6EBE0;
 }
 .lessonImage {
   width: 30%;
@@ -107,18 +128,40 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+.offcanvas-header {
+  background-color: #0C91BF;
+  display: flex;
+  justify-content: center;
+}
+.offcanvas-title {
+  font-size: 50px;
+}
 .videoContainer {
   position: relative;
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 .activityVideo {
   position: absolute;
   top: 0;
-  left: 0;
   bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
+}
+.navbar-nav {
+  font-size: 30px;
+}
+.card-video {
+  border-radius: 10px;
+}
+.lessonDetailsContainer {
+  display: flex;
+  margin: 20px;
+}
+.addtolesson {
+  margin-top: 50px;
 }
