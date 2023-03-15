@@ -101,7 +101,7 @@ export default function ActivityForm({ obj }) {
       </FloatingLabel>
       <FloatingLabel controlId="floatingInput4" label="Activity Length" className="mb-3">
         <Form.Control
-          type="number"
+          type="text"
           placeholder="Enter activity length"
           name="length"
           value={formInput.length}

@@ -53,8 +53,8 @@ ActivityCard.propTypes = {
   activityObj: PropTypes.shape({
     activity_url: PropTypes.string,
     activity_name: PropTypes.string,
-    length: PropTypes.number,
-    grade: PropTypes.number,
+    length: PropTypes.string,
+    grade: PropTypes.string,
     firebaseKey: PropTypes.string,
     uid: PropTypes.string,
   }).isRequired,
