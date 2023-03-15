@@ -23,7 +23,7 @@ to come
 ## Relevant Links <!-- Link to all the things that are required outside of the ones that have their own section -->
 - [Check out the deployed site](https://on-the-fly.netlify.app/)
 - [Wireframes](https://www.figma.com/file/DGTIGuJzeUIt1METnEVVef/On-the-Fly?node-id=0%3A1&t=7eeuzuUqz1enZxvi-0)
-- [PlanningProcess] (https://www.figma.com/file/jo3UM8TeAbuGe7gwbqL2xf/On-the-Fly-Ideas?t=7eeuzuUqz1enZxvi-0)
+- [Planning Process](https://www.figma.com/file/jo3UM8TeAbuGe7gwbqL2xf/On-the-Fly-Ideas?t=7eeuzuUqz1enZxvi-0)
 - [Project Board](https://github.com/users/erin-stephens/projects/4/views/1)
 
 ## Code Snippet <!-- OPTIONAL, but doesn't hurt -->
@@ -65,7 +65,7 @@ export default function AddActivitytoLesson({ obj }) {
 ```
 
 ## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
-<img width="250" alt="login page" src="./src/assets/screenshots/loginview.png"><img width="250" alt="home page" src="./src/assets/screenshots/homepageview.png"><img width="250" alt="offcanvas" src="./src/assets/screenshots/offcanvasview.png"><img width="250" alt="all activities" src="./src/assets/screenshots/allactivitiesview.png"><img width="250" alt="activity details" src="./src/assets/screenshots/activitydetailsview.png"><img width="250" alt="all lessons" src="./src/assets/screenshots/alllessonsview.png"><img width="250" alt="lesson details" src="./src/assets/screenshots/lessondetailsview.png">
+<img width="250" alt="login page" src="./src/assets/screenshots/loginview.png"> <img width="250" alt="home page" src="./src/assets/screenshots/homepageview.png"> <img width="250" alt="offcanvas" src="./src/assets/screenshots/offcanvasview.png"> <img width="250" alt="all activities" src="./src/assets/screenshots/allactivitiesview.png"> <img width="250" alt="activity details" src="./src/assets/screenshots/activitydetailsview.png"> <img width="250" alt="all lessons" src="./src/assets/screenshots/alllessonsview.png"> <img width="250" alt="lesson details" src="./src/assets/screenshots/lessondetailsview.png">
 
 ## Contributors
 - [Erin Stephens](https://github.com/erin-stephens)
