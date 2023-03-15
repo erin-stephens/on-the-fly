@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Card from 'react-bootstrap/Card';
 import { deleteActivity } from '../api/activityData';
+import { deleteActivityComments } from '../api/commentData';
 import AddtoLessonModal from './AddtoLessonModal';
 import { useAuth } from '../utils/context/authContext';
 
 export default function ActivityCard({ activityObj, onUpdate }) {
+  // eslint-disable-next-line no-unused-vars
+  const [activity, setActivity] = useState({});
   const deleteThisActivity = () => {
     if (window.confirm(`Delete ${activityObj.activity_name}?`)) {
+      deleteActivityComments(activity.firebaseKey);
       deleteActivity(activityObj.firebaseKey).then(() => onUpdate());
     }
   };

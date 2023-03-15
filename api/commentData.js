@@ -1,4 +1,5 @@
 import { clientCredentials } from '../utils/client';
+import { deleteActivity } from './activityData';
 
 const endpoint = clientCredentials.databaseURL;
 
@@ -58,9 +59,21 @@ const getCommentsById = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const deleteActivityComments = (firebaseKey) => new Promise((resolve, reject) => {
+  getCommentsById(firebaseKey).then((commentsArr) => {
+    const deleteAllComments = commentsArr.map((comment) => deleteComment(comment.firebaseKey));
+
+    Promise.all(deleteAllComments).then(() => {
+      deleteActivity(firebaseKey).then(resolve);
+    });
+  })
+    .catch(reject);
+});
+
 export {
   createComment,
   updateComment,
   deleteComment,
   getCommentsById,
+  deleteActivityComments,
 };
