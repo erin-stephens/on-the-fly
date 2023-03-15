@@ -41,13 +41,18 @@ h1 {
 .userProfileContainer {
   display: flex;
   padding-right: 20px;
-  flex-grow: 12;
+  flex-grow: 8;
   justify-content: flex-end;
 }
 .logoContainer {
   margin-top: 40px;
   margin-left: 20px;
   flex-grow: 1;
+}
+.searchBarContainer {
+  display: flex;
+  flex-grow: 6;
+  justify-content: center;
 }
 .activityCarouselContainer {
   display: flex;
@@ -64,6 +69,7 @@ h1 {
   display: flex;
   flex-direction: row;
   margin: 5px;
+  background-color: #E6EBE0;
 }
 .redBtn {
   background-color: #FF5A5F; 
@@ -110,6 +116,7 @@ h1 {
   background-color: #FF5A5F;
   display: flex;
   align-items: center;
+  border-radius: 10px;
 }
 .profileDetails {
   margin: 15px;
@@ -164,4 +171,14 @@ h1 {
 }
 .addtolesson {
   margin-top: 50px;
+}
+.topContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.searchBar {
+  width: 75%;
+}
+.searchInput {
+  width: 50%;
 }
