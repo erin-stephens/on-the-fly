@@ -20,21 +20,6 @@ const getUserActivities = (uid) => new Promise((resolve, reject) => {
     })
     .catch(reject);
 });
-// Activities for Home View
-/* const getHomeActivities = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/activities.json`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      const homeFilterActivities = Object.values(data).filter((item) => item.public === true || item.uid === uid);
-      resolve(homeFilterActivities);
-    })
-    .catch(reject);
-}); */
 
 // Get Single Activity
 const getSingleActivity = (firebaseKey) => new Promise((resolve, reject) => {
@@ -104,9 +89,9 @@ const getAllActivities = () => new Promise((resolve, reject) => {
     })
     .catch(reject);
 });
+
 export {
   getUserActivities,
-  // getHomeActivities,
   getSingleActivity,
   createActivity,
   updateActivity,

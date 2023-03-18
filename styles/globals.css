@@ -90,6 +90,11 @@ h1 {
 .dropdownBtn:hover {
   background-color: #12323A
 }
+.mintBtn, .mintBtn:hover {
+  background-color: #AAF0C1;
+  color: #12323A;
+  border: none;
+}
 .addLessonContainer {
   display: flex;
   justify-content: right;
@@ -178,10 +183,12 @@ h1 {
   display: flex;
   justify-content: space-around;
 }
-.searchBar {
-  width: 75%;
-}
 .searchInput {
-  width: 50%;
+  width: 100%;
   border-radius: 7px;
+}
+.btn-group {
+  display: flex;
+  margin: 20px;
+  width: 75%;
 }

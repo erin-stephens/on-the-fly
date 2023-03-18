@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { getAllActivities } from '../api/activityData';
 import ActivityCard from '../components/ActivityCard';
 
@@ -39,10 +41,20 @@ export default function ActivitiesPage() {
         <div className="searchBar">
           <input
             type="text"
-            placeholder="Search Activities"
+            placeholder="Search Activities by Name"
             onChange={handleChange}
             className="searchInput"
           />
+        </div>
+        <div>
+          <ButtonGroup aria-label="Basic example">
+            <Link passHref href="/filteredActivities/brainBreak"><Button variant="secondary">Brain Breaks</Button></Link>
+            <Link passHref href="/filteredActivities/indoorRecess"><Button variant="secondary">Indoor Recess</Button></Link>
+            <Link passHref href="/filteredActivities/math"><Button variant="secondary">Math</Button></Link>
+            <Link passHref href="/filteredActivities/reading"><Button variant="secondary">Reading</Button></Link>
+            <Link passHref href="/filteredActivities/science"><Button variant="secondary">Science</Button></Link>
+            <Link passHref href="/filteredActivities/socialStudies"><Button variant="secondary">Social Studies</Button></Link>
+          </ButtonGroup>
         </div>
         <div className="addActivityContainer">
           <Link passHref href="/activity/new"><button className="redBtn btn" type="button">Add an Activity</button></Link>
