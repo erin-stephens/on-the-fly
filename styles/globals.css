@@ -130,15 +130,17 @@ h1 {
 .carousel-indicators {
   margin: -30px;
 }
+.offcanvas {
+  background-color: #AAF0C1;
+}
 .offcanvas-body {
-  background-color: #0C91BF;
+  background-color: #AAF0C1;
   display: flex;
   flex-direction: column;
 }
 .offcanvas-header {
-  background-color: #0C91BF;
+  background-color: #AAF0C1;
   display: flex;
-  justify-content: center;
 }
 .offcanvas-title {
   font-size: 50px;
