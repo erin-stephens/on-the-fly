@@ -39,7 +39,7 @@ export default function LessonPlansPage() {
         <div className="searchBar">
           <input
             type="text"
-            placeholder="Search Lessons"
+            placeholder="Search Lessons by Name"
             onChange={handleChange}
             className="searchInput"
           />
