@@ -48,6 +48,7 @@ export default function ViewActivity() {
       <div className="addtolesson">
         <AddtoLessonModal />
       </div>
+      <hr className="text-white" />
       <div className="commentCardContainer">
         {comments.map((comment) => (<CommentCard key={comment.firebaseKey} commentObj={comment} onUpdate={displayComments} />
         ))}

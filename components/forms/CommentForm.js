@@ -44,7 +44,7 @@ export default function CommentForm({ activityFbKey, onUpdate }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h4 className="mt-3 mb-3">Add A Comment</h4>
+      <h4 className="mt-3 mb-3 text-white">Add A Comment</h4>
 
       <FloatingLabel controlId="floatingTextArea" label="Type your comment here..." className="mb-3 text-black">
         <Form.Control

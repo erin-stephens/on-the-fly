@@ -18,7 +18,7 @@ export default function CommentCard({ commentObj, onUpdate }) {
   useEffect(() => {
     getSingleActivity(commentObj.activity_id).then(setActivity);
   }, [commentObj.activity_id]);
-
+  console.warn(commentObj);
   return (
     <div>
       <Card className="comment-card">
@@ -33,10 +33,11 @@ export default function CommentCard({ commentObj, onUpdate }) {
               </p>
               <footer className="blockquote-footer">
                 {commentObj.author}
+                <br />
                 {commentObj.uid === user.uid || user.displayName === activity.username
                   ? (
                     <Button
-                      className="red-btn comment-btn"
+                      className="redBtn"
                       onClick={deleteThisComment}
                     >
                       Delete
