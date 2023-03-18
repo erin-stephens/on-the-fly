@@ -10,13 +10,13 @@ export default function Home() {
         <title>My Resources</title>
       </Head>
       <div className="activityIndex">
-        <h1>All Activities</h1>
+        <h1>Your Activities</h1>
         <div className="activityCarouselContainer">
           <UserActivityCarousel />
         </div>
       </div>
       <div className="lessonIndex">
-        <h1>All Lesson Plans</h1>
+        <h1>Your Lesson Plans</h1>
         <div className="lessonCarouselContainer">
           <UserLessonCarousel />
         </div>

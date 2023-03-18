@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import ActivityCarousel from '../components/homepage/ActivityCarousel';
 import LessonCarousel from '../components/homepage/LessonCarousel';
 
@@ -9,16 +10,20 @@ export default function Home() {
       <Head>
         <title>Home</title>
       </Head>
-      <div className="activityIndex">
-        <h1>All Activities</h1>
-        <div className="activityCarouselContainer">
-          <ActivityCarousel />
-        </div>
-      </div>
       <div className="lessonIndex">
-        <h1>All Lesson Plans</h1>
+        <Link href="/lessonPlans" passHref>
+          <h1>Explore Lesson Plans</h1>
+        </Link>
         <div className="lessonCarouselContainer">
           <LessonCarousel />
+        </div>
+      </div>
+      <div className="activityIndex">
+        <Link href="/activities" passHref>
+          <h1>Explore Activities</h1>
+        </Link>
+        <div className="activityCarouselContainer">
+          <ActivityCarousel />
         </div>
       </div>
     </>

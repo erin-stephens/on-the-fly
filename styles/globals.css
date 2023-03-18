@@ -49,6 +49,9 @@ h1 {
   margin-left: 20px;
   flex-grow: 1;
 }
+.logo {
+  padding: 20px 0px;
+}
 .searchBarContainer {
   display: flex;
   flex-grow: 6;
@@ -62,7 +65,7 @@ h1 {
   display: flex;
   justify-content: center;
 }
-.lessonIndex {
+.activityIndex {
   margin-top: 60px;
 }
 .lessonCard {
@@ -121,9 +124,6 @@ h1 {
 .profileDetails {
   margin: 15px;
 }
-.logo {
-  padding: 20px 0px;
-}
 .carousel-control-prev, .carousel-control-next {
   margin: -60px;
 }
@@ -181,4 +181,5 @@ h1 {
 }
 .searchInput {
   width: 50%;
+  border-radius: 7px;
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Nav } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Logo from './Logo';
+import DarkLogo from './DarkLogo';
 
 export default function OffcanvasMenu() {
   const [show, setShow] = useState(false);
@@ -19,7 +19,7 @@ export default function OffcanvasMenu() {
             width: '200px',
           }}
           >
-            <Logo />
+            <DarkLogo />
           </div>
         </Offcanvas.Header>
         <Offcanvas.Body>
