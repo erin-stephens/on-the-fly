@@ -1,16 +1,25 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { getSingleActivity } from '../../api/activityData';
 import AddtoLessonModal from '../../components/AddtoLessonModal';
+import CommentCard from '../../components/CommentCard';
+import CommentForm from '../../components/forms/CommentForm';
+import { getCommentsById } from '../../api/commentData';
 
 export default function ViewActivity() {
   const [activity, setActivity] = useState([]);
+  const [comments, setComments] = useState([]);
   const router = useRouter();
   const { firebaseKey } = router.query;
 
+  const displayComments = () => {
+    getCommentsById(firebaseKey).then(setComments);
+  };
   useEffect(() => {
     getSingleActivity(firebaseKey).then(setActivity);
+    displayComments();
   }, [firebaseKey]);
 
   console.warn(activity);
@@ -38,6 +47,14 @@ export default function ViewActivity() {
       </div>
       <div className="addtolesson">
         <AddtoLessonModal />
+      </div>
+      <hr className="text-white" />
+      <div className="commentCardContainer">
+        {comments.map((comment) => (<CommentCard key={comment.firebaseKey} commentObj={comment} onUpdate={displayComments} />
+        ))}
+      </div>
+      <div>
+        <CommentForm activityFbKey={firebaseKey} onUpdate={displayComments} />
       </div>
     </>
   );
