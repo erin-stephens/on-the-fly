@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Nav } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Logo from './Logo';
+import DarkLogo from './DarkLogo';
 
 export default function OffcanvasMenu() {
   const [show, setShow] = useState(false);
@@ -13,26 +13,25 @@ export default function OffcanvasMenu() {
     <>
       <button type="button" onClick={handleShow} className="redBtn btn btn-lg">&#9776;</button>
       <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header>
-          <div style={{
-            height: '200px',
+        <Offcanvas.Header
+          style={{
             width: '200px',
+            height: '200px',
           }}
-          >
-            <Logo />
-          </div>
+        >
+          <DarkLogo />
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav onClick={handleClose}>
             <Link href="/">Home
             </Link>
-            <hr className="text-white" />
+            <hr />
             <Link href="/myPage" passHref>My Resources
             </Link>
-            <hr className="text-white" />
+            <hr />
             <Link href="/activities" passHref> View Activities
             </Link>
-            <hr className="text-white" />
+            <hr />
             <Link href="/lessonPlans" passHref> View Lesson Plans
             </Link>
           </Nav>
