@@ -71,7 +71,7 @@ const getBBActivities = () => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const bbSubjects = Object.values(data).filter((activity) => activity.subject === 'brain break');
+      const bbSubjects = Object.values(data).filter((activity) => activity.subject === 'brain breaks');
       resolve(bbSubjects);
     })
     .catch(reject);

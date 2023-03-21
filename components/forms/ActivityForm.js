@@ -130,7 +130,7 @@ export default function ActivityForm({ obj }) {
           <option value="5th">5th</option>
         </Form.Select>
       </FloatingLabel>
-      <FloatingLabel controlId="floatingTextarea1" label="Description">
+      <FloatingLabel controlId="floatingTextarea1" label="Description" className="mb-3">
         <Form.Control
           as="textarea"
           placeholder="How to use this activity"
