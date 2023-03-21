@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import ActivityCard from '../../components/ActivityCard';
-import { getReadingActivities } from '../../api/filterData';
+import { getReadingActivities } from '../../api/filterActivityData';
 
 export default function ReadingPage() {
   const [activities, setActivities] = useState([]);

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import ActivityCard from '../../components/ActivityCard';
-import { getRecessActivities } from '../../api/filterData';
+import { getRecessActivities } from '../../api/filterActivityData';
 
 export default function IndoorRecessPage() {
   const [activities, setActivities] = useState([]);
