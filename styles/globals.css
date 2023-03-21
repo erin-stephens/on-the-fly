@@ -23,7 +23,9 @@ body {
 h1 {
   color: #E6EBE0;
 }
-
+.links:hover {
+  color: #0C91BF;
+}
 .navbar {
   background-color: #12323A;
   display: flex;

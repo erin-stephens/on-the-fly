@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <div className="lessonIndex">
         <Link href="/lessonPlans" passHref>
-          <h1>Explore Lesson Plans</h1>
+          <h1 className="links">Explore Lesson Plans</h1>
         </Link>
         <div className="lessonCarouselContainer">
           <LessonCarousel />
@@ -20,7 +20,7 @@ export default function Home() {
       </div>
       <div className="activityIndex">
         <Link href="/activities" passHref>
-          <h1>Explore Activities</h1>
+          <h1 className="links">Explore Activities</h1>
         </Link>
         <div className="activityCarouselContainer">
           <ActivityCarousel />
