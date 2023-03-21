@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { getAllLessons } from '../api/lessonData';
 import LessonCard from '../components/LessonCard';
 
@@ -49,6 +51,16 @@ export default function LessonPlansPage() {
         </div>
       </div>
       <h1> All Lessons </h1>
+      <div className="btnGroup">
+        <ButtonGroup>
+          <Link passHref href="/filteredLessons/brainBreakLP"><Button variant="secondary">Brain Breaks</Button></Link>
+          <Link passHref href="/filteredLessons/indoorRecessLP"><Button variant="secondary">Indoor Recess</Button></Link>
+          <Link passHref href="/filteredLessons/mathLP"><Button variant="secondary">Math</Button></Link>
+          <Link passHref href="/filteredLessons/readingLP"><Button variant="secondary">Reading</Button></Link>
+          <Link passHref href="/filteredLessons/scienceLP"><Button variant="secondary">Science</Button></Link>
+          <Link passHref href="/filteredLessons/socialStudiesLP"><Button variant="secondary">Social Studies</Button></Link>
+        </ButtonGroup>
+      </div>
       <div className="lessonCardContainer">
         {filteredItems.map((lesson) => (
           <LessonCard key={lesson.firebaseKey} lessonObj={lesson} onUpdate={getLessons} />

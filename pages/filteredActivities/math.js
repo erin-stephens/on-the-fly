@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import ActivityCard from '../../components/ActivityCard';
-import { getMathActivities } from '../../api/filterData';
+import { getMathActivities } from '../../api/filterActivityData';
 
 export default function MathPage() {
   const [activities, setActivities] = useState([]);

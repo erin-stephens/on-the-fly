@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import ActivityCard from '../../components/ActivityCard';
-import { getBBActivities } from '../../api/filterData';
+import { getBBActivities } from '../../api/filterActivityData';
 
 export default function BrainBreakPage() {
   const [activities, setActivities] = useState([]);

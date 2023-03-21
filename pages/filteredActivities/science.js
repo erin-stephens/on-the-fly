@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import ActivityCard from '../../components/ActivityCard';
-import { getScienceActivities } from '../../api/filterData';
+import { getScienceActivities } from '../../api/filterActivityData';
 
 export default function SciencePage() {
   const [activities, setActivities] = useState([]);
