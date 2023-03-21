@@ -95,7 +95,7 @@ export default function LessonForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingTextarea1" label="Directions">
+      <FloatingLabel controlId="floatingTextarea1" label="Directions" className="mb-3">
         <Form.Control
           as="textarea"
           placeholder="How to use this lesson plan"

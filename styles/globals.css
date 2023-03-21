@@ -37,22 +37,23 @@ h1 {
 .hamburgerBtn {
   display: flex;
   flex-grow: 1;
+  margin-left: 10px;
+  justify-content: center;
 }
 .userProfileContainer {
   display: flex;
   padding-right: 20px;
-  flex-grow: 8;
+  flex-grow: 10;
   justify-content: flex-end;
 }
 .logoContainer {
   margin-top: 40px;
-  margin-left: 20px;
   flex-grow: 1;
 }
 .logo {
   padding: 20px 0px;
 }
-.searchBarContainer {
+.searchBar {
   display: flex;
   flex-grow: 6;
   justify-content: center;
@@ -94,10 +95,12 @@ h1 {
   background-color: #AAF0C1;
   color: #12323A;
   border: none;
+  margin-top: 15px;
 }
 .addLessonContainer {
   display: flex;
   justify-content: right;
+  flex-grow: 6;
 }
 .lessonCardContainer {
   display: flex;
@@ -107,6 +110,7 @@ h1 {
 .addActivityContainer {
   display: flex;
   justify-content: right;
+  flex-grow: 6;
 }
 .activityCardContainer {
   display: flex;
@@ -181,7 +185,8 @@ h1 {
 }
 .topContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 .searchInput {
   width: 100%;
@@ -191,4 +196,8 @@ h1 {
   display: flex;
   margin: 20px;
   width: 75%;
+}
+.btnGroup {
+  display: flex;
+  justify-content: center;
 }

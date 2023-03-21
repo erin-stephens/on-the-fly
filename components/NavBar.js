@@ -10,6 +10,9 @@ export default function NavBar() {
   return (
     <div>
       <Navbar>
+        <div className="hamburgerBtn">
+          <OffcanvasMenu />
+        </div>
         <div className="logoContainer">
           <Link passHref href="/">
             <Navbar.Brand>
@@ -22,9 +25,6 @@ export default function NavBar() {
               </div>
             </Navbar.Brand>
           </Link>
-        </div>
-        <div className="hamburgerBtn">
-          <OffcanvasMenu />
         </div>
         <div
           className="userProfileContainer"
