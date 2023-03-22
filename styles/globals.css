@@ -25,6 +25,7 @@ h1 {
 }
 .links:hover {
   color: #0C91BF;
+  cursor: pointer;
 }
 .navbar {
   background-color: #12323A;
