@@ -52,7 +52,7 @@ export default function AddtoLessonModal({ obj }) {
 
   return (
     <>
-      <Button className="redBtn btn" onClick={handleShow}>
+      <Button className="redBtn" onClick={handleShow}>
         Add to Lesson?
       </Button>
 
@@ -86,7 +86,7 @@ export default function AddtoLessonModal({ obj }) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button className="redBtn btn" onClick={handleSubmit}>
+          <Button className="redBtn" onClick={handleSubmit}>
             Add
           </Button>
         </Modal.Footer>
