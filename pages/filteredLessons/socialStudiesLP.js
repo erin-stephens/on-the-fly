@@ -24,7 +24,7 @@ export default function SocialStudiesLessonPage() {
       <h1> Social Studies Lessons </h1>
       <div className="d-flex flex-wrap LessonCardContainer">
         {lessons.map((lesson) => (
-          <LessonCard key={lesson.firebasekey} lessonObj={lesson} onUpdate={getAllSSLessons} />
+          <LessonCard key={lesson.firebaseKey} lessonObj={lesson} onUpdate={getAllSSLessons} />
         ))}
       </div>
       <Link passHref href="/lessonPlans"><Button className="mintBtn">Back</Button></Link>

@@ -24,7 +24,7 @@ export default function IndoorRecessLessonPage() {
       <h1> Indoor Recess Lessons </h1>
       <div className="d-flex flex-wrap lessonCardContainer">
         {lessons.map((lesson) => (
-          <LessonCard key={lesson.firebasekey} lessonObj={lesson} onUpdate={getAllRecessLessons} />
+          <LessonCard key={lesson.firebaseKey} lessonObj={lesson} onUpdate={getAllRecessLessons} />
         ))}
       </div>
       <Link passHref href="/lessonPlans"><Button className="mintBtn">Back</Button></Link>

@@ -24,7 +24,7 @@ export default function BrainBreakPage() {
       <h1> Brain Break Activities </h1>
       <div className="d-flex flex-wrap activityCardContainer">
         {activities.map((activity) => (
-          <ActivityCard key={activity.firebasekey} activityObj={activity} onUpdate={getAllBBActivities} />
+          <ActivityCard key={activity.firebaseKey} activityObj={activity} onUpdate={getAllBBActivities} />
         ))}
       </div>
       <Link passHref href="/activities"><Button className="mintBtn">Back</Button></Link>

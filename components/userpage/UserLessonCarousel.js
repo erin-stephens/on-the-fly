@@ -19,7 +19,7 @@ export default function UserLessonCarousel() {
     <Carousel interval={null} className="lessonCarouselContainer">
       {lessons.map((lesson) => (
         <Carousel.Item className="lessonCarouselItem">
-          <LessonCard key={lesson.firebasekey} lessonObj={lesson} onUpdate={getLessons} />
+          <LessonCard key={lesson.firebaseKey} lessonObj={lesson} onUpdate={getLessons} />
         </Carousel.Item>
       ))}
     </Carousel>

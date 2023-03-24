@@ -24,7 +24,7 @@ export default function ReadingLessonPage() {
       <h1> Reading Lessons </h1>
       <div className="d-flex flex-wrap LessonCardContainer">
         {lessons.map((lesson) => (
-          <LessonCard key={lesson.firebasekey} lessonObj={lesson} onUpdate={getAllReadingLessons} />
+          <LessonCard key={lesson.firebaseKey} lessonObj={lesson} onUpdate={getAllReadingLessons} />
         ))}
       </div>
       <Link passHref href="/lessonPlans"><Button className="mintBtn">Back</Button></Link>
