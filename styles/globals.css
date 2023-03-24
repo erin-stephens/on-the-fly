@@ -17,7 +17,7 @@ a {
   box-sizing: border-box;
 }
 
-body {
+body, .container {
   background-color: #12323A;
 }
 h1 {

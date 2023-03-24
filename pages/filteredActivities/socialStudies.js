@@ -24,7 +24,7 @@ export default function SocialStudiesPage() {
       <h1> Social Studies Activities </h1>
       <div className="d-flex flex-wrap activityCardContainer">
         {activities.map((activity) => (
-          <ActivityCard key={activity.firebasekey} activityObj={activity} onUpdate={getAllSSActivities} />
+          <ActivityCard key={activity.firebaseKey} activityObj={activity} onUpdate={getAllSSActivities} />
         ))}
       </div>
       <Link passHref href="/activities"><Button className="mintBtn">Back</Button></Link>

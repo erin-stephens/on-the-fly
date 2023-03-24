@@ -24,7 +24,7 @@ export default function MathLessonPage() {
       <h1> Math Lessons </h1>
       <div className="d-flex flex-wrap LessonCardContainer">
         {lessons.map((lesson) => (
-          <LessonCard key={lesson.firebasekey} lessonObj={lesson} onUpdate={getAllMathLessons} />
+          <LessonCard key={lesson.firebaseKey} lessonObj={lesson} onUpdate={getAllMathLessons} />
         ))}
       </div>
       <Link passHref href="/lessonPlans"><Button className="mintBtn">Back</Button></Link>

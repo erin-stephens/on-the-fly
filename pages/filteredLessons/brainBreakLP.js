@@ -24,7 +24,7 @@ export default function BrainBreakLessonPage() {
       <h1> Brain Break Lessons </h1>
       <div className="d-flex flex-wrap lessonCardContainer">
         {lessons.map((lesson) => (
-          <LessonCard key={lesson.firebasekey} lessonObj={lesson} onUpdate={getAllBBLessons} />
+          <LessonCard key={lesson.firebaseKey} lessonObj={lesson} onUpdate={getAllBBLessons} />
         ))}
       </div>
       <Link passHref href="/lessonPlans"><Button className="mintBtn">Back</Button></Link>

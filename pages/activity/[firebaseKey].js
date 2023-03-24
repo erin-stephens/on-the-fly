@@ -46,7 +46,7 @@ export default function ViewActivity() {
         <p>Description: {activity.description}</p>
       </div>
       <div className="addtolesson">
-        <AddtoLessonModal />
+        <AddtoLessonModal obj={activity} />
       </div>
       <hr className="text-white" />
       <div className="commentCardContainer">

@@ -63,7 +63,7 @@ export default function ActivitiesPage() {
       </div>
       <div className="d-flex flex-wrap activityCardContainer">
         {filteredItems.map((activity) => (
-          <ActivityCard key={activity.firebasekey} activityObj={activity} onUpdate={getActivities} />
+          <ActivityCard key={activity.firebaseKey} activityObj={activity} onUpdate={getActivities} />
         ))}
       </div>
     </div>

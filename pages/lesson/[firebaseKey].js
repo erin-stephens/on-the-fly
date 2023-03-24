@@ -36,6 +36,7 @@ export default function ViewLessonPlan() {
   useEffect(() => {
     getLessonDetails();
   }, [firebaseKey, activities]);
+
   const lessonIcon = () => {
     switch (lesson.subject) {
       case 'math':
