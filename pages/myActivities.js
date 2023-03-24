@@ -48,7 +48,7 @@ export default function UserActivitiesPage() {
           />
         </div>
         <div className="addActivityContainer">
-          <Link passHref href="/activity/new"><button className="redBtn btn" type="button">Add an Activity</button></Link>
+          <Link passHref href="/activity/new"><button className="redBtn" type="button">Add an Activity</button></Link>
         </div>
       </div>
       <h1> My Activities </h1>

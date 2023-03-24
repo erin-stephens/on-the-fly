@@ -107,7 +107,7 @@ export default function LessonForm({ obj }) {
           required
         />
       </FloatingLabel>
-      <Button type="submit" className="redBtn btn">{obj.firebaseKey ? 'Update' : 'Create'} Lesson</Button>
+      <Button type="submit" className="redBtn">{obj.firebaseKey ? 'Update' : 'Create'} Lesson</Button>
     </Form>
   );
 }

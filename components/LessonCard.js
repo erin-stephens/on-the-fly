@@ -40,18 +40,16 @@ export default function LessonCard({ lessonObj, onUpdate }) {
   };
   return (
     <Card className="lessonCard" style={{ width: '30rem', height: '11rem' }}>
-      <div className="lessonImage">
-        {lessonIcon(lessonObj.subject)}
-      </div>
-      <hr />
-      <div>
-        <Card.Body>
-          <Card.Title>{lessonObj.lesson_name}</Card.Title>
+      <Card.Body>
+        <div className="lessonImage">
+          {lessonIcon(lessonObj.subject)}
+        </div>
+        <div><Card.Title>{lessonObj.lesson_name}</Card.Title>
           <Card.Text>{lessonObj.subject}</Card.Text>
           <Card.Text>{lessonObj.class}</Card.Text>
           <Card.Text>{lessonObj.username}</Card.Text>
           <Dropdown>
-            <Dropdown.Toggle className="dropdownBtn" id="dropdown-basic">
+            <Dropdown.Toggle className="dropdownBtn">
               Options
             </Dropdown.Toggle>
 
@@ -65,8 +63,8 @@ export default function LessonCard({ lessonObj, onUpdate }) {
               ) : ''}
             </Dropdown.Menu>
           </Dropdown>
-        </Card.Body>
-      </div>
+        </div>
+      </Card.Body>
     </Card>
   );
 }

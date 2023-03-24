@@ -48,7 +48,7 @@ export default function UserLessonPlansPage() {
           />
         </div>
         <div className="addLessonContainer">
-          <Link passHref href="/lesson/new"><button type="button" className="redBtn btn">Create a Lesson</button></Link>
+          <Link passHref href="/lesson/new"><button type="button" className="redBtn">Create a Lesson</button></Link>
         </div>
       </div>
       <h1> My Lesson Plans </h1>

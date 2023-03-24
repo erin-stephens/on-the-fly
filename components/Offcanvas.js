@@ -11,7 +11,7 @@ export default function OffcanvasMenu() {
   const handleShow = () => setShow(true);
   return (
     <>
-      <button type="button" onClick={handleShow} className="redBtn btn btn-lg">&#9776;</button>
+      <button type="button" onClick={handleShow} className="redBtn offcanvasBtn">&#9776;</button>
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header
           style={{

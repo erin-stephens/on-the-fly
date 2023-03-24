@@ -32,7 +32,7 @@ export default function ActivityCard({ activityObj, onUpdate }) {
             Grade: {activityObj.grade}
           </Card.Text>
           <Dropdown>
-            <Dropdown.Toggle className="dropdownBtn" id="dropdown-basic">
+            <Dropdown.Toggle className="dropdownBtn">
               Options
             </Dropdown.Toggle>
 

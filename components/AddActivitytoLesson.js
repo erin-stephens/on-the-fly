@@ -49,7 +49,7 @@ export default function AddActivitytoLesson({ obj }) {
   return (
     <>
       {obj.uid === user.uid ? (
-        <button type="button" className="redBtn btn" onClick={handleShow}>
+        <button type="button" className="redBtn" onClick={handleShow}>
           Add Activity?
         </button>
       ) : ''}
@@ -83,7 +83,7 @@ export default function AddActivitytoLesson({ obj }) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <button type="button" className="redBtn btn" onClick={handleSubmit}>
+          <button type="button" className="redBtn" onClick={handleSubmit}>
             Add
           </button>
         </Modal.Footer>

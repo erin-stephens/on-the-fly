@@ -34,7 +34,6 @@ export default function LessonActivityCard({ lessonActivityObj, lessonPlan_id, o
           <Dropdown>
             <Dropdown.Toggle
               className="dropdownBtn"
-              id="dropdown-basic"
             >
               Options
             </Dropdown.Toggle>
