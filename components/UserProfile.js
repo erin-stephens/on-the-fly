@@ -37,7 +37,7 @@ export default function UserProfile() {
           </div>
         </Modal.Header>
         <Modal.Footer>
-          <button type="button" className="btn redBtn" onClick={signOut}>
+          <button type="button" className="redBtn" onClick={signOut}>
             Sign Out
           </button>
         </Modal.Footer>

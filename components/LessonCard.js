@@ -40,7 +40,7 @@ export default function LessonCard({ lessonObj, onUpdate }) {
   };
   return (
     <Card className="lessonCard" style={{ width: '30rem', height: '11rem' }}>
-      <Card.Body>
+      <Card.Body className="lessonBody">
         <div className="lessonImage">
           {lessonIcon(lessonObj.subject)}
         </div>
