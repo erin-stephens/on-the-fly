@@ -5,11 +5,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif !important;
 }
 
 body, .container {
-  background-color: #12323A;
+  background-color: #12323A !important;
 }
 
 a {
@@ -97,7 +97,7 @@ h1 {
 }
 
 .dropdownBtn {
-  background-color: #0C91BF;
+  background-color: #0C91BF !important;
   border: #12323A;
   color: #E6EBE0;
   border-radius: 5px;
