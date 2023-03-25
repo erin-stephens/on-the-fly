@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Button } from 'react-bootstrap';
 import LessonCard from '../../components/LessonCard';
 import { getReadingLessons } from '../../api/filterLessonData';
 
@@ -27,7 +26,7 @@ export default function ReadingLessonPage() {
           <LessonCard key={lesson.firebaseKey} lessonObj={lesson} onUpdate={getAllReadingLessons} />
         ))}
       </div>
-      <Link passHref href="/lessonPlans"><Button className="mintBtn">Back</Button></Link>
+      <Link passHref href="/lessonPlans"><button type="button" className="mintBtn">Back</button></Link>
     </>
   );
 }

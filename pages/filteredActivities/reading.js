@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Button } from 'react-bootstrap';
 import ActivityCard from '../../components/ActivityCard';
 import { getReadingActivities } from '../../api/filterActivityData';
 
@@ -27,7 +26,7 @@ export default function ReadingPage() {
           <ActivityCard key={activity.firebaseKey} activityObj={activity} onUpdate={getAllReadingActivities} />
         ))}
       </div>
-      <Link passHref href="/activities"><Button className="mintBtn">Back</Button></Link>
+      <Link passHref href="/activities"><button type="button" className="mintBtn">Back</button></Link>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, FloatingLabel, Button } from 'react-bootstrap';
+import { Form, FloatingLabel } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 import { useAuth } from '../../utils/context/authContext';
 import { createComment, updateComment } from '../../api/commentData';
@@ -57,7 +57,7 @@ export default function CommentForm({ activityFbKey, onUpdate }) {
         />
       </FloatingLabel>
 
-      <Button type="submit" className="redBtn">Submit Comment</Button>
+      <button type="submit" className="redBtn">Submit Comment</button>
     </Form>
   );
 }
