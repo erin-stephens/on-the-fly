@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { useAuth } from '../utils/context/authContext';
 import { deleteComment } from '../api/commentData';
 import { getSingleActivity } from '../api/activityData';
@@ -36,12 +36,13 @@ export default function CommentCard({ commentObj, onUpdate }) {
                 <br />
                 {commentObj.uid === user.uid || user.displayName === activity.username
                   ? (
-                    <Button
+                    <button
+                      type="button"
                       className="redBtn"
                       onClick={deleteThisComment}
                     >
                       Delete
-                    </Button>
+                    </button>
                   ) : ''}
               </footer>
             </blockquote>

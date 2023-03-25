@@ -159,7 +159,7 @@ h1 {
 }
 
 .carousel-indicators {
-  margin: -30px;
+  margin: -30px !important;
 }
 
 .activityCard, .lessonActivityCard {
@@ -184,7 +184,7 @@ h1 {
   height: 40px;
 }
 
-.offcanvas {
+.offcanvas-start {
   background-color: #AAF0C1;
 }
 
@@ -223,6 +223,8 @@ h1 {
 
 .navbar-nav {
   font-size: 30px;
+  text-decoration: none;
+  color: #12323A;
 }
 
 .card-video {
